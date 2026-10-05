@@ -42,7 +42,8 @@ async function createProduct(title, price, category) {
       throw new Error("Network response was not ok");
     }
     const product = await response.json();
-    return product;
+    // return product;
+    return product.id;
   } catch (error) {
     console.error("Error:", error);
   }
